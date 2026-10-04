@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#080b11] text-[#e2e8f0] font-sans antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom subtle scrollbar for industrial telemetry look */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0d121c;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+  }
+}
+
+@layer utilities {
+  .industrial-panel {
+    @apply bg-[#0d131f]/90 border border-[#1e293d] rounded;
+  }
+  .industrial-header {
+    @apply font-mono text-xs uppercase tracking-wider text-[#94a3b8] font-semibold;
+  }
+  .telemetry-val {
+    @apply font-mono font-bold tracking-tight text-[#f8fafc];
+  }
+  .grid-pattern {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+}
